@@ -13,6 +13,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation(); //live reloads razor pages
 
 var app = builder.Build();
 
